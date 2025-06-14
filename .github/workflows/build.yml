@@ -24,9 +24,10 @@ jobs:
         run: chmod +x ./gradlew
 
       - name: Build with Gradle
-        run: git clone --recurse-submodules https://github.com/amnezia-vpn/amneziawg-android
-        run: cd amneziawg-android
-        run: ./gradlew assembleRelease
+        run: |
+        git clone --recurse-submodules https://github.com/abosaad11/amneziawg-android
+        cd amneziawg-android
+        ./gradlew assembleRelease
 
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4
